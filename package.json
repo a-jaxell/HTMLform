@@ -1,0 +1,15 @@
+{
+  "name": "tailwind-login",
+  "version": "1.0.0",
+  "description": "Assigment for UI/UX course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "Alvar 6 Robin",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
