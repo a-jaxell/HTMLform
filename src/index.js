@@ -20,9 +20,7 @@
     
 */
 
-const passwordInput = document.querySelector("#passwordInput");
-
-passwordInput.addEventListener("keyup", () => {
+document.querySelector("#passwordInput").addEventListener("keyup", () => {
   if (passwordInput.value.length < 5) {
     strMeter.value = 0;
   } else {
@@ -61,7 +59,7 @@ passwordInput.addEventListener("keyup", () => {
   }
 });
 
-document.querySelector("#submitBtn").addEventListener("click", (e) => {
+document.querySelector('#createUserForm').addEventListener("submit", (e) => {
   e.preventDefault();
 
   const qs = document.querySelector.bind(document);
@@ -73,10 +71,9 @@ document.querySelector("#submitBtn").addEventListener("click", (e) => {
     password: qs("#passwordInput").value,
   };
   return user.Name && user.Username && user.email && user.password ? console.log(user) : console.log('There are empty fields');
-  
 });
 
-document.querySelector("#loginBtn").addEventListener("click", (e) => {
+document.querySelector("#Login").addEventListener("submit", (e) => {
   e.preventDefault();
 
   const qs = document.querySelector.bind(document);

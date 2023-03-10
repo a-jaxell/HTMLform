@@ -37,7 +37,7 @@
       </div>
   </form> 
 
-  <form name="Login" action="" class="bg-red-300 rounded shadow-2xl max-w-md mt-10 mx-auto flex flex-col">
+  <form id="Login" name="Login" action="" class="bg-red-300 rounded shadow-2xl max-w-md mt-10 mx-auto flex flex-col">
     
     <h1 class="text-2xl p-4 mx-auto">Logga in</h1>
     
@@ -53,60 +53,6 @@
 
     </div>
   </form>
-
-  <form class="mt-52 max-w-md mx-4 self-center px-5 rounded-2xl shadow-lg flex flex-col flex-grow justify-center bg-cblue">
-    <h1 class="p-5 mx-auto text-4xl text-white font-bold">Login</h1>
-
-    <div class="w-[70%] mx-auto">
-        <label for="Username" class="block mb-1 text-white">Username:</label>
-        <input id="Username" required type="text" class="w-full mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Username"> 
-
-        <label for="Password" class="block mb-1 text-white">Password:</label>
-        <input id="Password" required type="password" class="w-full mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Password">
-    </div>
-
-    <button class="w-1/2 self-center my-4 bg-clightblue font-semibold  border-2 border-transparent hover:border-white">Login</button>
-</form>
-
-
-<form class="mt-10 max-w-md mx-4 self-center px-5 rounded-2xl shadow-lg flex flex-col flex-grow justify-center bg-cblue">
-  <h1 class="p-5 mx-auto text-4xl text-white font-bold">Skapa konto</h1>
-
-  <div class="w-[95%] mx-auto">
-
-      <section class="flex space-x-2">
-          <div>
-              <label for="Password" class="block mb-1 text-white">Förnamn:</label>
-              <input id="Password" required type="password" class="w-full mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Förnamn">
-          </div>
-          <div>
-              <label for="Password" class="block mb-1 text-white">Efternamn:</label>
-              <input id="Password" required type="password" class="w-full mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Efternamn">
-          </div>
-      </section>
-
-      <label for="Username" class="block mb-1 text-white">Användarnamn:</label>
-      <input id="Username" required type="text" class="w-[50%] mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Användarnamn"> 
-
-      <label for="Username" class="block mb-1 text-white">E-mail:</label>
-      <input id="Username" required type="text" class="w-[50%] mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="E-mail"> 
-      
-      <section class="flex space-x-2">
-          <div>
-              <label for="Password" class="block mb-1 text-white">Skapa lösenord:</label>
-              <input id="Password" required type="password" class="w-full mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Lösenord">
-          </div>
-          <div>
-              <label for="Password" class="block mb-1 text-white">Bekräfta lösenord:</label>
-              <input id="Password" required type="password" class="w-full mb-2 focus:outline-none focus:ring-0 border-4 border-transparent focus:border-clightblue" placeholder="Lösenord">
-          </div>
-      </section>
-      
-      <!-- användarnamn, e-post, fullständiga namn samt lösenord -->
-      <button class="mt-32 w-1/2 self-center bg-clightblue font-semibold  border-2 border-transparent hover:border-white">Login</button>
-  </div>
-
-</form>
 
   <script src="./index.js"></script>
 </body>
