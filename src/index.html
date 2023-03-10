@@ -8,45 +8,48 @@
     <title>Document</title>
 </head>
 
-<!-- https://tailwindcss.com/docs/adding-custom-styles -->
 
 <body>
-  <form name="createUser" action="" class="bg-red-300 rounded shadow-2xl max-w-md mt-10 mx-auto flex flex-col">
+  <form id="createUserForm" name="createUser" class="bg-red-300 rounded shadow-2xl max-w-md mt-10 mx-auto flex flex-col">
     
     <h1 class="text-2xl p-5 mx-auto">Registrera Användare</h1>
     
     <div class="flex flex-col items-center">
         
       <label class="my-1 self-center w-3/4" for="usr">Användarnamn: <em class="text-xs">Minst 8 tecken</em></label>
-      <input required pattern=".{8,}$" title="Minst åtta eller fler tecken" class="rounded mb-2 w-3/4" name="usr" type="text" placeholder="Username">
-        
-      <label class="my-1 self-center w-3/4" for="psw">Lösenord: <em class="text-xs">Minst 8 tecken</em></label>
-      <input required pattern="(?=.*|d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Minst åtta eller fler tecken varav en siffra, en liten bokstav samt en versal." class="rounded mb-2 w-3/4"name="psw" type="password" placeholder="Password">
-        
+      <input id="userNameId" title="Minst åtta eller fler tecken" class="rounded mb-2 w-3/4" name="usr" type="text" placeholder="Username">
+      
+      <label class="my-1 self-center w-3/4" for="psw">Lösenord: <em class="text-xs">Minst 5 tecken</em></label>
+      <input id="passwordInput" required pattern="(?=.*|d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Minst åtta eller fler tecken varav en siffra, en liten bokstav samt en versal." class="rounded mb-0 w-3/4" name="psw" type="password" placeholder="Password">
+      <section>
+        <label class="text-xs" for="pswMeter">Lösenordsstyrka: </label>
+        <meter id='strMeter' name="pswMeter" class="w-32" low="33" high="66" optimum="80" value="" max="100"></meter>
+      </section>
+      
       <label class="my-1 self-center w-3/4" for="email">Email: <em class="text-xs">exempel.epost@din.domän</em></label>
-      <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="rounded mb-2  w-3/4"name="email" placeholder="example@email.com" type="email">
+      <input id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="rounded mb-2  w-3/4"name="email" placeholder="example@email.com" type="email">
         
       <label class="my-1 self-center w-3/4" for="name">Name: <em class="text-xs">För- och efternamn</em></label>
-      <input required class="rounded w-3/4"name="name" type="text" placeholder="Name">
+      <input id="name" required class="rounded w-3/4"name="name" type="text" placeholder="Name">
         
-      <button class="w-24 my-8 p-1 border-2 bg-emerald-300 rounded border-solid border-emerald-300 hover:border-emerald-100 hover:cursor-pointer active:bg-emerald-500 active:border-emerald-800" type="submit">Submit</button>
+      <button id="submitBtn" class="w-24 my-8 p-1 border-2 bg-emerald-300 rounded border-solid border-emerald-300 hover:border-emerald-100 hover:cursor-pointer active:bg-emerald-500 active:border-emerald-800">Submit</button>
     
       </div>
   </form> 
 
-  <form name="createUser" action="" class="bg-red-300 rounded shadow-2xl max-w-md mt-10 mx-auto flex flex-col">
+  <form name="Login" action="" class="bg-red-300 rounded shadow-2xl max-w-md mt-10 mx-auto flex flex-col">
     
     <h1 class="text-2xl p-4 mx-auto">Logga in</h1>
     
     <div class="flex flex-col items-center">
         
       <label class="my-1 self-center w-3/4" for="usr">Användarnamn:</label>
-      <input required pattern=".{8,}$" title="" class="rounded mb-2 w-3/4" name="usr" type="text" placeholder="Username">
+      <input id="usrLogin" required pattern=".{8,}$" title="" class="rounded mb-2 w-3/4" name="usr" type="text" placeholder="Username">
         
       <label class="my-1 self-center w-3/4" for="psw">Lösenord:</label>
-      <input required pattern="(?=.*|d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="" class="rounded mb-2 w-3/4"name="psw" type="password" placeholder="Password">
+      <input id="usrPsw"required pattern="(?=.*|d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="" class="rounded mb-2 w-3/4"name="psw" type="password" placeholder="Password">
     
-      <button class="w-24 mb-4 mt-2 p-1 border-2 bg-emerald-300 rounded border-solid border-emerald-300 hover:border-emerald-100 hover:cursor-pointer active:bg-emerald-500 active:border-emerald-800" type="submit">Login</button>
+      <button id="loginBtn" class="w-24 mb-4 mt-2 p-1 border-2 bg-emerald-300 rounded border-solid border-emerald-300 hover:border-emerald-100 hover:cursor-pointer active:bg-emerald-500 active:border-emerald-800" type="submit">Login</button>
 
     </div>
   </form>
@@ -105,6 +108,6 @@
 
 </form>
 
-<script src="./src/index.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>
